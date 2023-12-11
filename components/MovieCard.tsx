@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useCallback} from 'react'
 import { isEmpty } from 'lodash';
 import { BsFillPlayFill } from 'react-icons/bs';
 import {BiChevronDown} from 'react-icons/bi';
@@ -9,11 +9,11 @@ interface MovieCardProp {
     data: Record<string, any>;
 }
 const MovieCard: React.FC<MovieCardProp> = ({ data }) => {
-    if (isEmpty(data)) {
-        return null;
-    }
-    const {openModal} = useInfoModal();
+    
     const router = useRouter();
+
+    const {openModal} = useInfoModal();
+
     return (
         <>
             <div className="group bg-zinc-900 col-span relative h-[12vw]">
