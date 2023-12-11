@@ -42,7 +42,7 @@ const Auth = () => {
                 password,
                 callbackUrl: '/'
             });
-            router.push('/profile');
+            router.push('/');
         }
         catch (e) { console.log(e); }
 
